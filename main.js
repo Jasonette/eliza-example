@@ -63,7 +63,7 @@ var view = {
                       "size": "12"
                     },
                     "text": "{{text}}"
-                  }
+                  }]
                 }
               }
             }
