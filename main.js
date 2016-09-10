@@ -99,7 +99,8 @@ app.use(bodyParser.json()); // support json encoded bodies
 app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 
 app.get('/', function (req, res) {
-  res.json(view(req.originalUrl));
+  var url = req.protocol + '://' + req.get('host') + req.originalUrl;
+  res.json(view(url));
 });
 app.get('/messages', function(req, res){
   res.json({messages: messages});
