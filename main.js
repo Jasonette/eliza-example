@@ -52,13 +52,13 @@ var view = function(addr){
                     "components": [{
                       "type": "image",
                       "url": "{{avatar}}",
-                      "style": {"width": "50", "height": "50", "corner_radius": "3"}
+                      "style": {"width": "30", "height": "30", "corner_radius": "15"}
                     },
                     {
                       "type": "label",
                       "style": {
                         "font": "Courier",
-                        "size": "12"
+                        "size": "14"
                       },
                       "text": "{{text}}"
                     }]
