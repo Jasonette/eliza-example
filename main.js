@@ -85,9 +85,9 @@ var view = {
 };
 
 // Load Eliza engine
-var ElizaBot = require('./elizabot.js')
-var eliza = new ElizaBot
-eliza.memSize = 1024
+var ElizaBot = require('./elizabot.js');
+var eliza = new ElizaBot;
+eliza.memSize = 1024;
 
 // Populate with first message from Eliza
 var messages = [{ avatar: "https://s3-us-west-2.amazonaws.com/fm.ethan.jason/bot.png", text: eliza.getInitial()}];
