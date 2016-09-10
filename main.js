@@ -14,7 +14,7 @@ var view = function(addr){
           "reload": {
             "type": "$network.request",
             "options": {
-              "url": addr + "message",
+              "url": addr + "messages",
               "method": "get"
             },
             "success": {
