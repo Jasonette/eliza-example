@@ -14,7 +14,7 @@ var view = function(addr){
           "reload": {
             "type": "$network.request",
             "options": {
-              "url": "http://" + addr + "/message",
+              "url": "http://" + addr + "message",
               "method": "get"
             },
             "success": {
@@ -25,7 +25,7 @@ var view = function(addr){
             "type": "$network.request",
             "options": {
               "method": "post",
-              "url": "http://" + addr + "/messages",
+              "url": "http://" + addr + "messages",
               "data": {
                 "text": "{{$get.message}}"
               }
@@ -99,8 +99,7 @@ app.use(bodyParser.json()); // support json encoded bodies
 app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 
 app.get('/', function (req, res) {
-  var url = req.headers.host+'/'+req.url;
-  res.json(view(url));
+  res.json(view(req.originalUrl));
 });
 app.get('/messages', function(req, res){
   res.json({messages: messages});
