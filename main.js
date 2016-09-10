@@ -14,7 +14,7 @@ var view = function(addr){
           "reload": {
             "type": "$network.request",
             "options": {
-              "url": "http://" + addr + "message",
+              "url": addr + "message",
               "method": "get"
             },
             "success": {
@@ -25,7 +25,7 @@ var view = function(addr){
             "type": "$network.request",
             "options": {
               "method": "post",
-              "url": "http://" + addr + "messages",
+              "url": addr + "messages",
               "data": {
                 "text": "{{$get.message}}"
               }
